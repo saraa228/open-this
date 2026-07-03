@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Anand ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+font-family:Poppins,sans-serif;
+background:linear-gradient(-45deg,#ff758c,#ff7eb3,#9b5de5,#5eead4);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+color:white;
+overflow-x:hidden;
+}
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+section{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:30px;
+text-align:center;
+}
+
+h1{
+font-family:'Great Vibes',cursive;
+font-size:70px;
+}
+
+.subtitle{
+font-size:22px;
+margin:20px 0;
+max-width:700px;
+}
+
+button{
+padding:15px 35px;
+border:none;
+border-radius:40px;
+font-size:18px;
+background:white;
+color:#ff4d88;
+cursor:pointer;
+transition:.4s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+.card{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+padding:35px;
+border-radius:25px;
+max-width:750px;
+line-height:1.8;
+margin:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.hidden{
+display:none;
+animation:fade .8s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.reason{
+font-size:22px;
+margin-top:20px;
+}
+
+footer{
+padding:30px;
+text-align:center;
+opacity:.8;
+}
+
+.heart{
+position:fixed;
+color:white;
+animation:float linear infinite;
+pointer-events:none;
+}
+
+@keyframes float{
+from{
+transform:translateY(100vh);
+opacity:1;
+}
+to{
+transform:translateY(-20vh);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<section>
+
+<h1>Happy Birthday Anand ❤️</h1>
+
+<p class="subtitle">
+
+To the love of my life.
+
+A man doesn't celebrate his birthday so that his girlfriend can.
+
+</p>
+
+<button onclick="openLetter()">
+wanna see more? 💌
+</button>
+
+</section>
+
+<section id="letter" class="hidden">
+
+<div class="card">
+
+<h2>💌 Anand,</h2>
+
+<p>
+You mean the whole world to me, you are the one I would die for,live for,even stop saying ANAND in my annoying voice, and trust blindly with everything. You never judged me for anything and made my bad memories seem a little less horrifying. You are a part of my life and now I don't care who else isn't. I am so proud of you I always will be, no matter what. You are so strong in every way that counts. I always want my baby to be happy, so you keep smiling because that smile gives you your spark. 💋💋💋
+</p>
+
+<br>
+
+<p>
+
+Love,
+
+<br>
+
+Sara ❤️
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>❤️ Reasons I Love You ❤️</h2>
+
+<p class="reason" id="reason">
+
+Click the button below.
+
+</p>
+
+<br>
+
+<button onclick="nextReason()">
+
+Show Another Reason ❤️
+
+</button>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>✨ Wishh ✨</h2>
+
+<p>
+
+May all the wishes of my 11:11 wish(you) come true...
+
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>🌙 One Last Thing...</h2>
+
+<p>
+
+If I had one wish,
+
+it would simply be to see you smiling today and forever.
+
+Happy Birthday once again,baby.
+
+❤️ I'll always be happiest to see you achieve everything you dream of (yes, even your fuck money).
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+Made with ❤️ by your baby 
+
+</footer>
+
+<script>
+
+function openLetter(){
+document.getElementById("letter").classList.remove("hidden");
+document.getElementById("letter").scrollIntoView({behavior:"smooth"});
+}
+
+const reasons=[
+"Because your smile makes my day brighter.",
+"Because I simply love you.",
+"you make me want to believe in love.",
+"You are my baby.",
+"You always make me feel special.",
+"You're my favourite person.",
+"Your kindness inspires me.",
+"Because you are Anand ❤️"
+];
+
+let i=0;
+
+function nextReason(){
+document.getElementById("reason").innerHTML=reasons[i];
+i=(i+1)%reasons.length;
+}
+
+function heart(){
+const h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=(15+Math.random()*25)+"px";
+h.style.animationDuration=(4+Math.random()*5)+"s";
+document.body.appendChild(h);
+
+setTimeout(()=>h.remove(),8000);
+}
+
+setInterval(heart,250);
+
+</script>
+
+</body>
+</html>
